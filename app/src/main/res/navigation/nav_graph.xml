@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inventoryFragment">
+
+    <fragment
+        android:id="@+id/inventoryFragment"
+        android:name="com.example.inventorymanager.ui.inventory.InventoryFragment"
+        android:label="@string/menu_materials">
+        <action
+            android:id="@+id/action_inventoryFragment_to_addMaterialFragment"
+            app:destination="@id/addMaterialFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addMaterialFragment"
+        android:name="com.example.inventorymanager.ui.inventory.AddMaterialFragment"
+        android:label="@string/add_material" />
+
+    <fragment
+        android:id="@+id/salesFragment"
+        android:name="com.example.inventorymanager.ui.sales.SalesFragment"
+        android:label="@string/menu_sales">
+        <action
+            android:id="@+id/action_salesFragment_to_newSaleFragment"
+            app:destination="@id/newSaleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newSaleFragment"
+        android:name="com.example.inventorymanager.ui.sales.NewSaleFragment"
+        android:label="@string/new_sale" />
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.inventorymanager.ui.dashboard.DashboardFragment"
+        android:label="@string/menu_dashboard" />
+</navigation>

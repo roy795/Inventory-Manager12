@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/reports_nav_graph"
+    app:startDestination="@id/productionReportFragment">
+
+    <fragment
+        android:id="@+id/productionReportFragment"
+        android:name="com.example.inventorymanager.ui.reports.ProductionReportFragment"
+        android:label="Production Report">
+        <action
+            android:id="@+id/action_production_to_inventory"
+            app:destination="@id/inventoryReportFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inventoryReportFragment"
+        android:name="com.example.inventorymanager.ui.reports.InventoryReportFragment"
+        android:label="Inventory Report" />
+</navigation>
